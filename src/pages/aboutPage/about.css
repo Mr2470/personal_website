@@ -1,0 +1,198 @@
+.header {
+    position: relative;
+}
+
+.Mr2470Container {
+    position: absolute;
+    left: 3vw;
+    top: 0;
+}
+
+.HeaderList {
+    display: flex;
+    justify-content: center;
+}
+
+.HeaderList ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Mr2470 {
+    color: white;
+    font-weight: bold;
+}
+
+.HeaderList li {
+    color: #d9d8d6;
+    padding: 10px;
+    font-size: larger;
+}
+.contactBTN {
+    position: absolute;
+    right: 3vw;
+    top: 12px;
+    background: rgba(217, 216, 214, 0.9);
+    color: #111;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.contactBTN:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+.body{
+    position: relative;
+}
+
+.aboutmep{
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    padding: 10px;
+    color: #d9d8d6;
+    width: 30vw;
+}
+.ArtaIMG{
+    position: absolute;
+    right: 3vw;
+}
+.ul2{
+    display: none;
+}
+.li2{
+    display: none;
+}
+.BTN2{
+    display: none;
+}
+a {
+    color: #d9d8d6;
+    text-decoration: none;
+}
+
+a:active {
+    color: #d9d8d6;
+}
+.background {
+    position: relative;
+    min-height: 100vh;
+}
+
+.background::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("/misty-forest-mountains-with-lush-green-trees-dd-2560x1440.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    .background{
+        background-image: none;
+    }
+    .header {
+        position: relative;
+    }
+
+    .Mr2470Container {
+        position: relative;
+        display: flex;
+        transform: none;
+        margin-bottom: 10px;
+        /* justify-content: center;         */
+    }
+
+    .Mr2470 {
+        font-size: 28px;
+    }
+
+    .HeaderList {
+        width: 100%;
+    }
+
+    .HeaderList ul {
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .HeaderList li {
+        display: none;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    .contactBTN {
+        position: static;
+        transform: none;
+        display: none;
+        width: 100px;
+        height: 35px;
+    }
+    .ul2{
+        display: block;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        left: 5px;
+    }
+    .li2{
+        display: inline;
+        color: #d9d8d6;
+        padding: 10px;
+        margin-left: 10px;
+        float: left;
+    }
+
+    .body {
+        position: relative;
+    }
+
+    .ArtaIMG {
+        display: none;
+        width: 85%;
+        max-width: 400px;
+    }
+    
+    .aboutmep{
+        padding: 10px;
+        color: #d9d8d6;
+        width: 100%;
+        top: 15vh;
+        left: 0;
+    }
+    .BTN2 {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 3vw;
+        background: rgba(217, 216, 214, 0.9);
+        color: #111;
+        text-decoration: none;
+        
+        padding: 9px 18px;
+        border-radius: 25px;
+        
+        font-size: 14px;
+        font-weight: 600;
+        
+        transition: 0.2s ease;
+    }
+
+    .BTN2:hover {
+        background: white;
+        transform: translateY(-2px);
+    }
+}

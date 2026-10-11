@@ -1,0 +1,213 @@
+.header {
+    position: relative;
+}
+
+.Mr2470Container {
+    position: absolute;
+    left: 3vw;
+    top: 0;
+}
+
+.HeaderList {
+    display: flex;
+    justify-content: center;
+}
+
+.HeaderList ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Mr2470 {
+    color: white;
+    font-weight: bold;
+}
+
+.HeaderList li {
+    color: #d9d8d6;
+    padding: 10px;
+    font-size: larger;
+}
+
+.contactBTN {
+    position: absolute;
+    right: 3vw;
+    top: 12px;
+    background: rgba(217, 216, 214, 0.9);
+    color: #111;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.contactBTN:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.body {
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    width: 30vw;
+}
+
+p {
+    padding: 10px;
+    color: #d9d8d6;
+}
+
+.ArtaIntro {
+    font-family: font1;
+}
+
+.Arta {
+    font-weight: bold;
+    font-size: 3vw;
+    padding: 5px;
+}
+
+.HelloP {
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.ArtaIMG {
+    position: absolute;
+    right: 3vw;
+    z-index: -1;
+}
+
+.ul2 {
+    display: none;
+}
+
+.li2 {
+    display: none;
+}
+
+.BTN2 {
+    display: none;
+}
+
+.linkoflist{
+    color: #d9d8d6;
+    text-decoration: none;
+}
+
+.linkoflist:active {
+    color: #d9d8d6;
+} 
+
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative;
+    }
+
+    .Mr2470Container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .Mr2470 {
+        font-size: 28px;
+    }
+
+    .HeaderList {
+        width: 100%;
+    }
+
+    .HeaderList ul {
+        display: none;
+    }
+
+    .HeaderList li {
+        display: none;
+    }
+
+    .contactBTN {
+        display: none;
+    }
+
+    .ul2 {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: 5px;
+    }
+
+    .li2 {
+        display: inline;
+        color: #d9d8d6;
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .body {
+        position: relative;
+    }
+
+    .info {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        margin: 30px 5vw 0;
+    }
+
+    .HelloP {
+        font-size: 14px;
+    }
+
+    .Arta {
+        font-size: 40px;
+    }
+
+    .ArtaIntro {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .ArtaIMG {
+        display: none;
+    }
+    .BTN2 {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 3vw;
+        background: rgba(217, 216, 214, 0.9);
+        color: #111;
+        text-decoration: none;
+        
+        padding: 9px 18px;
+        border-radius: 25px;
+        
+        font-size: 14px;
+        font-weight: 600;
+        
+        transition: 0.2s ease;
+    }
+
+    .BTN2:hover {
+        background: white;
+        transform: translateY(-2px);
+    }
+
+
+}

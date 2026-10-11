@@ -1,0 +1,266 @@
+.header {
+    position: relative;
+}
+
+.Mr2470Container {
+    position: absolute;
+    left: 3vw;
+    top: 0;
+}
+
+.HeaderList {
+    display: flex;
+    justify-content: center;
+}
+
+.HeaderList ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Mr2470 {
+    color: white;
+    font-weight: bold;
+}
+
+.HeaderList li {
+    color: #d9d8d6;
+    padding: 10px;
+    font-size: larger;
+}
+
+.contactBTN {
+    position: absolute;
+    right: 3vw;
+    top: 12px;
+    background: rgba(217, 216, 214, 0.9);
+    color: #111;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.contactBTN:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+.body {
+    position: relative;
+}
+
+.aboutmep {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+    padding: 10px;
+    color: #d9d8d6;
+    width: 30vw;
+}
+
+.ArtaIMG {
+    position: absolute;
+    right: 3vw;
+}
+
+.ul2 {
+    display: none;
+}
+
+.li2 {
+    display: none;
+}
+
+.BTN2 {
+    display: none;
+}
+
+a {
+    color: #d9d8d6;
+    text-decoration: none;
+}
+
+.contactBody {
+    position: relative;
+    min-height: calc(100vh - 80px);
+}
+
+.info {
+    position: absolute;
+    top: 10vh;
+    left: 20vw;
+}
+
+.contactBody h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.email,
+.github {
+    display: block;
+    width: fit-content;
+    color: #d9d8d6;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 20px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(217, 216, 214, 0.25);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    transition: 0.25s ease;
+}
+
+.email:hover,
+.github:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateX(5px);
+}
+
+a:active {
+    color: white;
+}
+
+.backgroundcontact {
+    min-height: 100vh;
+    background-image: url("/beautiful-morning-in-forest-4k-4l-2560x1440.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .backgroundcontact {
+        background-image: none;
+        background-color: #111;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .Mr2470Container {
+        position: relative;
+        display: flex;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    .Mr2470 {
+        font-size: 28px;
+    }
+
+    .HeaderList {
+        width: 100%;
+    }
+
+    .HeaderList ul {
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .HeaderList li {
+        display: none;
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    .contactBTN {
+        position: static;
+        transform: none;
+        display: none;
+        width: 100px;
+        height: 35px;
+    }
+
+    .ul2 {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: 5px;
+    }
+
+    .li2 {
+        display: inline;
+        color: #d9d8d6;
+        padding: 10px;
+        margin-left: 10px;
+        float: left;
+    }
+
+    .body {
+        position: relative;
+    }
+
+    .ArtaIMG {
+        display: none;
+        width: 85%;
+        max-width: 400px;
+    }
+    .aboutmep {
+        padding: 10px;
+        color: #d9d8d6;
+        width: 100%;
+        top: 15vh;
+        left: 0;
+    }
+
+    .contactBody {
+        min-height: calc(100vh - 100px);
+    }
+
+    .info {
+        position: relative;
+        top: 8vh;
+        left: 0;
+        padding: 20px;
+    }
+
+    .contactBody h1 {
+        font-size: 34px;
+        margin-bottom: 25px;
+    }
+
+    .email,
+    .github {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    .BTN2 {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 3vw;
+        background: rgba(217, 216, 214, 0.9);
+        color: #111;
+        text-decoration: none;
+        
+        padding: 9px 18px;
+        border-radius: 25px;
+        
+        font-size: 14px;
+        font-weight: 600;
+        
+        transition: 0.2s ease;
+    }
+
+    .BTN2:hover {
+        background: white;
+        transform: translateY(-2px);
+    }
+}
