@@ -1,0 +1,119 @@
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(16, 21, 20, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+}
+
+.site-nav__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "brand links cta";
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 1rem var(--pad-r) 1rem var(--pad-l);
+}
+
+.site-nav__brand {
+    grid-area: brand;
+    justify-self: start;
+    color: var(--text-strong);
+    font-size: clamp(1.15rem, 1rem + 0.6vw, 1.4rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.site-nav__links {
+    grid-area: links;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.site-nav__link {
+    position: relative;
+    padding: 0.5rem 0.15rem;
+    color: var(--text);
+    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.075rem);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.site-nav__link:hover,
+.site-nav__link.is-active {
+    color: var(--text-strong);
+}
+
+.site-nav__link.is-active::after {
+    content: "";
+    position: absolute;
+    right: 0.15rem;
+    bottom: 0.1rem;
+    left: 0.15rem;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--text-strong);
+}
+
+.site-nav__cta {
+    grid-area: cta;
+    justify-self: end;
+    padding: 0.7rem 1.25rem;
+    border-radius: 999px;
+    background: var(--pill);
+    color: #111;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav__cta:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+    .site-nav__inner {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "brand cta"
+            "links links";
+        gap: 0.35rem 1rem;
+        padding: 0.6rem var(--pad-r) 0.5rem var(--pad-l);
+    }
+
+    .site-nav__links {
+        justify-content: flex-start;
+        gap: 1.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .site-nav__link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .site-nav__link.is-active::after {
+        bottom: 0.35rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-nav__link,
+    .site-nav__cta {
+        transition: none;
+    }
+}

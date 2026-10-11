@@ -1,52 +1,59 @@
-import { Link } from 'react-router-dom'
+import Nav from '../../components/nav'
+import PageBackground from '../../components/pageBackground'
 import './contact.css'
+
+const links = [
+    {
+        label: 'Email',
+        value: 'Mr2470iscool@gmail.com',
+        href: 'mailto:Mr2470iscool@gmail.com',
+    },
+    {
+        label: 'GitHub',
+        value: 'Mr2470 GitHub',
+        href: 'https://github.com/Mr2470',
+        external: true,
+    },
+]
 
 function Contact() {
     return (
         <>
-            <div className='backgroundcontact'>
-                <div className="header">
-                    <div className='Mr2470Container'>
-                        <h1 className='Mr2470'>Mr2470</h1>
-                        <button className='BTN2'>Contact Me</button>
-                    </div>
+            <PageBackground image="/beautiful-morning-in-forest-4k-4l-2560x1440.jpeg" />
 
-                    <div className='HeaderList'> 
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About me</Link></li>
-                        </ul>
-                    </div>
+            <Nav />
 
-                    <ul className='ul2'>
-                        <li className="li2"><Link to="/">Home</Link></li>
-                        <li className="li2"><Link to="/about">About me</Link></li>
-                    </ul>
+            <main className="page contact">
+                <h1 className="contact__title">Contact Me</h1>
+                <p className="contact__lead">
+                    Want to talk about a project, ask something, or just say
+                    hi? I&apos;m easiest to reach by email.
+                </p>
 
-                    <Link to="/contact" className="contactBTN">
-                        Contact Me
-                    </Link> 
-                </div>
-
-                <div className='contactBody'>
-                    <div className='info'>
-                        <h1>Contact Me</h1>
-
-                        <a href="mailto:Mr2470iscool@gmail.com" className='email'>
-                            Mr2470iscool@gmail.com
-                        </a>
-
-                        <a
-                            href="https://github.com/Mr2470"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className='github'
-                        >
-                            Mr2470 GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
+                <ul className="contact__list">
+                    {links.map((link) => (
+                        <li key={link.label}>
+                            <a
+                                className="contact__card"
+                                href={link.href}
+                                {...(link.external
+                                    ? {
+                                          target: '_blank',
+                                          rel: 'noopener noreferrer',
+                                      }
+                                    : {})}
+                            >
+                                <span className="contact__label">
+                                    {link.label}
+                                </span>
+                                <span className="contact__value">
+                                    {link.value}
+                                </span>
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </main>
         </>
     )
 }

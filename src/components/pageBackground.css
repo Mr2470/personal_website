@@ -1,0 +1,20 @@
+.page-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--bg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(16, 21, 20, calc(var(--overlay, 0.8) + 0.08)),
+        rgba(16, 21, 20, calc(var(--overlay, 0.8) - 0.06))
+    );
+}

@@ -1,213 +1,88 @@
-.header {
-    position: relative;
+.hero {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    min-height: min(70vh, 640px);
 }
 
-.Mr2470Container {
-    position: absolute;
-    left: 3vw;
-    top: 0;
+.hero__text {
+    flex: 1 1 460px;
+    min-width: 0;
+    max-width: 40rem;
 }
 
-.HeaderList {
+.hero__hello {
+    color: var(--text-muted);
+    font-size: clamp(0.9rem, 0.85rem + 0.3vw, 1.1rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero__name {
+    margin-top: 0.25rem;
+    color: var(--text-strong);
+    font-size: clamp(2.75rem, 2rem + 7vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.hero__intro {
+    margin-top: clamp(1rem, 2vw, 1.5rem);
+    color: var(--text);
+    font-family: font1, var(--font-body);
+    font-size: clamp(1rem, 0.95rem + 0.35vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.hero__media {
+    flex: 0 1 26rem;
     display: flex;
     justify-content: center;
+    min-width: 0;
 }
 
-.HeaderList ul {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.hero__img {
+    width: 100%;
+    max-width: 26rem;
+    max-height: min(70vh, 40rem);
+    object-fit: cover;
+    object-position: center top;
+    border-radius: var(--radius);
 }
 
-.Mr2470 {
-    color: white;
-    font-weight: bold;
-}
-
-.HeaderList li {
-    color: #d9d8d6;
-    padding: 10px;
-    font-size: larger;
-}
-
-.contactBTN {
-    position: absolute;
-    right: 3vw;
-    top: 12px;
-    background: rgba(217, 216, 214, 0.9);
-    color: #111;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 25px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.2s ease;
-}
-
-.contactBTN:hover {
-    background: white;
-    transform: translateY(-2px);
-}
-
-.body {
-    position: relative;
-}
-
-.info {
-    position: absolute;
-    top: 10vh;
-    left: 20vw;
-    width: 30vw;
-}
-
-p {
-    padding: 10px;
-    color: #d9d8d6;
-}
-
-.ArtaIntro {
-    font-family: font1;
-}
-
-.Arta {
-    font-weight: bold;
-    font-size: 3vw;
-    padding: 5px;
-}
-
-.HelloP {
-    font-weight: bold;
-    font-size: 1vw;
-}
-
-.ArtaIMG {
-    position: absolute;
-    right: 3vw;
-    z-index: -1;
-}
-
-.ul2 {
-    display: none;
-}
-
-.li2 {
-    display: none;
-}
-
-.BTN2 {
-    display: none;
-}
-
-.linkoflist{
-    color: #d9d8d6;
-    text-decoration: none;
-}
-
-.linkoflist:active {
-    color: #d9d8d6;
-} 
-
-
-@media (max-width: 768px) {
-
-    .header {
-        position: relative;
+/* Tablet and below: stack so the photo can never sit on top of the text. */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: clamp(1.75rem, 5vw, 2.75rem);
+        min-height: 0;
     }
 
-    .Mr2470Container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
+    .hero__text {
+        flex: none;
+        max-width: none;
     }
 
-    .Mr2470 {
-        font-size: 28px;
+    .hero__media {
+        flex: none;
     }
 
-    .HeaderList {
+    .hero__img {
         width: 100%;
+        max-width: 22rem;
+        margin: 0 auto;
+        max-height: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__hello {
+        letter-spacing: 0.08em;
     }
 
-    .HeaderList ul {
-        display: none;
+    .hero__img {
+        max-width: none;
     }
-
-    .HeaderList li {
-        display: none;
-    }
-
-    .contactBTN {
-        display: none;
-    }
-
-    .ul2 {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        left: 5px;
-    }
-
-    .li2 {
-        display: inline;
-        color: #d9d8d6;
-        padding: 10px;
-        margin-left: 10px;
-    }
-
-    .body {
-        position: relative;
-    }
-
-    .info {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: auto;
-        margin: 30px 5vw 0;
-    }
-
-    .HelloP {
-        font-size: 14px;
-    }
-
-    .Arta {
-        font-size: 40px;
-    }
-
-    .ArtaIntro {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .ArtaIMG {
-        display: none;
-    }
-    .BTN2 {
-        display: inline-block;
-        position: absolute;
-        top: 0;
-        right: 3vw;
-        background: rgba(217, 216, 214, 0.9);
-        color: #111;
-        text-decoration: none;
-        
-        padding: 9px 18px;
-        border-radius: 25px;
-        
-        font-size: 14px;
-        font-weight: 600;
-        
-        transition: 0.2s ease;
-    }
-
-    .BTN2:hover {
-        background: white;
-        transform: translateY(-2px);
-    }
-
-
 }
